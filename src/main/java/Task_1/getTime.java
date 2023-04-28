@@ -9,7 +9,11 @@ public class getTime {
             while (true) {
                 LocalDateTime currentTime = LocalDateTime.now();
                 long seconds = startTime.until(currentTime, java.time.temporal.ChronoUnit.SECONDS);
-                System.out.println("З запуску програми минуло " + seconds +" секунд");
+                if(seconds==5){
+                    System.out.print("");
+                }else {
+                    System.out.println("З запуску програми минуло " + seconds +" секунд");
+                }
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
